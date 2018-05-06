@@ -1,19 +1,24 @@
 ---
 title: "Artificial Neural Network"
+layout: post
+title: "ML - Artificial Neural Network"
+tags: [R, nnet package, artificial neural network, iris]
 output: github_document
 ---
+Today's goal is to understand the concept of Artificial Neural Network and to practice this with iris data in R. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.path = "README_figs/README-")
 ```
 
-## 01. Load libraries
+### 01. Load libraries
 ```{r}
 library(caret)
 library(nnet)
 ```
 
-## 02. Partition of the iris data into trainnig and test data
+
+### 02. Partition of the iris data into trainnig and test data
 ```{r}
 set.seed(0)
 idx <- createDataPartition(iris$Species, p=0.7, list=F)
@@ -26,7 +31,8 @@ table(iris_train$Species)
 table(iris_test$Species)
 ```
 
-## 03. standardization 
+
+### 03. Standardization 
 ```{r}
 iris_tr_scale <- as.data.frame(sapply(iris_train[-5], scale))
 iris_test_scale <- as.data.frame(sapply(iris_test[-5], scale))
@@ -37,7 +43,8 @@ iris_tr_scale$Species <- iris_train$Species
 iris_test_scale$Species <- iris_test$Species
 ```
 
-## 04. Data modeling
+
+### 04. Data modeling 1
 ```{r}
 iris_model <- nnet(Species~., data=iris_tr_scale, size=3)
 ```
@@ -46,7 +53,8 @@ iris_model <- nnet(Species~., data=iris_tr_scale, size=3)
 summary(iris_model)
 ```
 
-## 05. nnet model visualization
+
+### 05. nnet model visualization
 ```{r}
 library(devtools)
 
@@ -56,7 +64,8 @@ source_url('https://gist.githubusercontent.com/Peque/41a9e20d6687f2f3108d/raw/85
 plot.nnet(iris_model)
 ```
 
-## 06. prediction with the model
+
+### 06. Prediction with the model
 ```{r}
 iris_pred <- predict(iris_model, iris_test_scale, type="class") 
 # type="class" -> shoing the predicted category by this model
@@ -64,7 +73,8 @@ iris_pred <- predict(iris_model, iris_test_scale, type="class")
 iris_pred
 ```
 
-## 07. Verification of the predicted values
+
+### 07. Verification of the predicted values
 ```{r}
 table(iris_pred, iris_test$Species)
 ```
@@ -73,15 +83,18 @@ table(iris_pred, iris_test$Species)
 confusionMatrix(factor(iris_pred), iris_test$Species)
 ```
 
-## 2nd nnet model - having more nodes in the hidden layer 
+### Data modeling 2 - having more nodes in the hidden layer 
 ```{r}
 iris_model2 <- nnet(Species~., data=iris_tr_scale, size=8)
 summary(iris_model2)
 ```
 
-## prediction 
+
+### Prediction 
 ```{r}
 iris_pred2 <- predict(iris_model2, iris_test_scale, type="raw") 
 # type="raw" -> showing the percentage of each categoty 
 round(iris_pred2, 6)
 ```
+
+
