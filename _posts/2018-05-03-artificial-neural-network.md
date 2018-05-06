@@ -4,9 +4,11 @@ layout: post
 title: "ML - Artificial Neural Network"
 tags: [R, nnet package, artificial neural network, iris]
 output: github_document
+excerpt_separator: <!--more-->
 ---
 Today's goal is to understand the concept of Artificial Neural Network and to practice this with iris data in R. 
-
+ <!--more-->
+ 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.path = "README_figs/README-")
 ```
