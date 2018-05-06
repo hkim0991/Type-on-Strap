@@ -1,27 +1,27 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://hkim0991.github.io"
-title: Data or nada # site's title
-description: "A place to record data related studies and projects" # used by search engines
+title: Data or Nada # site's title
+description: "A personal blog to record and share data related studies and projects" # used by search engines
 
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Data or nada # blog's title
+  title: Data or Nada # blog's title
   avatar: assets/img/triangle.svg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>Change header text in <code>_config.yml</code> <br> to update this feature.</p>
+     <p>A little place to record and share <br> data related studies and projects.</p>
   header_text_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
   # Icons
-  rss: true  # Make sure you created a feed.xml with feed.xml layout
+  rss: # Make sure you created a feed.xml with feed.xml layout
   email_address: "h.kim0991@gmail.com" # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
