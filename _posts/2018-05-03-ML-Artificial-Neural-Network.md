@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Artificial Neural Network"
-tags: [R, nnet package, artificial neural network]
+title: "ML - Artificial Neural Network"
+tags: [R, nnet package, artificial neural network, iris]
 output: github_document
 ---
 Today's goal is to understand the concept of Artificial Neural Network and to practice this with iris data in R. 
