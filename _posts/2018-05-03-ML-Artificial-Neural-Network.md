@@ -4,7 +4,7 @@ title: "Artificial Neural Network"
 tags: [R, nnet package, artificial neural network]
 output: html_document
 ---
-Today's goal is to understand the concept of Artificial Neural Network and to practice this in R. 
+Today's goal is to understand the concept of Artificial Neural Network and to practice this with iris data in R. 
 
 
 ## 01. Load libraries
