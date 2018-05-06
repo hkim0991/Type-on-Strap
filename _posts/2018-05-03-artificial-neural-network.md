@@ -8,7 +8,7 @@ Today's goal is to understand the concept of Artificial Neural Network and to pr
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
 ```
 
 ## 01. Load libraries
@@ -89,3 +89,5 @@ iris_pred2 <- predict(iris_model2, iris_test_scale, type="raw")
 # type="raw" -> showing the percentage of each categoty 
 round(iris_pred2, 6)
 ```
+
+
