@@ -1,11 +1,10 @@
 ---
+layout: post
 title: "Artificial Neural Network"
-author: "hkim0991"
-date: "06/05/2018"
-output: 
-   html_document:
-        keep_md: true
+tags: [R, nnet package, artificial neural network]
 ---
+Today's goal is to understand the concept of Artificial Neural Network oncept and to practice this in R. 
+
 
 ## 01. Load libraries
 ```{r}
